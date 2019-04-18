@@ -39,14 +39,25 @@ main > header{
 
 .experience > ol{
     list-style: none;
+    padding-inline-start: 0px;
+}
+
+.experience h2{
+    margin-bottom: 1.5em;
 }
 
 .timeline {
     border-left: 2px solid #000;
 }
 
+.timeline > li > ul{
+    margin-top: 1em;
+}
+
 .timeline li{
     margin-bottom: 2em;
+    position: relative;
+    bottom: 10px;
 }
 
 .timeline > li{
@@ -54,19 +65,33 @@ main > header{
     margin-bottom: 3em;
 }
 
-.timeline > li > h3{
+.timeline > li h3{
     position: relative;
-    left: -65px;
     margin-block-start: 0em;
+    margin-block-end: 0em;
+    bottom: 20px;
 }
-.timeline > li > h3:before{
-    content: "·";
-    font-size: 79px;
+
+.timeline > li > p {
+    margin: 0px;
+    position: relative;
+    bottom: 10px;
+}
+
+.timeline > li:before{
+    content: "•";
+    font-size: 45px;
     vertical-align: middle;
     line-height: 0px;
+    position: relative;
+    left: -55px;
 }
 
 @media only screen and (min-width : 500px) {
+    .experience > ol{
+        padding-inline-start: 40px;
+    }
+
     main > header{
         display: grid;
         grid-template-columns: 50% 50%;
